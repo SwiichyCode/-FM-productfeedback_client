@@ -4,6 +4,8 @@ import { AppLayout } from "./components/layouts/AppLayout";
 import { Signin } from "@/views/auth/Signin";
 import { Signup } from "@/views/auth/Signup";
 import { Components } from "@/views/Components";
+import { DashboardLayout } from "@/components/layouts/DashboardLayout";
+import { Dashboard } from "@/views/dashboard/Dashboard";
 
 export const App = () => {
   return (
@@ -14,6 +16,10 @@ export const App = () => {
             <Route path="/" element={<Navigate to="/signin" />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/signup" element={<Signup />} />
+          </Route>
+
+          <Route element={<DashboardLayout />}>
+            <Route path="/dashboard" element={<Dashboard />} />
           </Route>
 
           <Route path="/components" element={<Components />} />

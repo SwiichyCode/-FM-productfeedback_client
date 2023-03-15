@@ -29,9 +29,16 @@ export const GlobalStyles = createGlobalStyle`
         --text-xxs: 1.3rem;
         --text-xs: 1.4rem;
         --text-sm: 1.5rem;
+        --text-md: 1.6rem;
+        --text-lg: 1.8rem;
+        --text-xl: 2rem;
+        --text-2xl: 2.4rem;
+        --text-3xl: 3.2rem;
 
         --rouded: 0.5rem;
         --rouded-xl: 1rem;
+        --rounded-2xl: 1.6rem;
+        --rounded-3xl: 2.4rem;
         --transition: all 0.2s ease-in-out;
     }
 `;

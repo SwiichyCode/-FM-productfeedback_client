@@ -8,7 +8,7 @@ export const StyledInput = styled.div<AuthInputProps>`
 
   input {
     width: 100%;
-    max-width: 25.5rem;
+    /* max-width: 25.5rem; */
     height: 4.8rem;
     padding: 0 2.4rem;
     border-radius: var(--rouded);
