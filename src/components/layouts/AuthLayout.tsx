@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 interface AuthLayoutProps {}
 
-const StyledAuthLayout = styled.div`
+const AuthLayoutWrapper = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
@@ -14,10 +14,10 @@ const StyledAuthLayout = styled.div`
 
 export const AuthLayout = (props: AuthLayoutProps) => {
   return (
-    <StyledAuthLayout>
+    <AuthLayoutWrapper>
       <main>
         <Outlet />
       </main>
-    </StyledAuthLayout>
+    </AuthLayoutWrapper>
   );
 };

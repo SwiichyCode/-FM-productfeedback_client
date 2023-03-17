@@ -4,7 +4,7 @@ import { AppLayout } from "./components/layouts/AppLayout";
 import { Signin } from "@/views/auth/Signin";
 import { Signup } from "@/views/auth/Signup";
 import { Components } from "@/views/Components";
-import { DashboardLayout } from "@/components/layouts/DashboardLayout";
+import { ProtectedLayout } from "@/components/layouts/ProtectedLayout";
 import { Dashboard } from "@/views/dashboard/Dashboard";
 
 export const App = () => {
@@ -18,7 +18,7 @@ export const App = () => {
             <Route path="/signup" element={<Signup />} />
           </Route>
 
-          <Route element={<DashboardLayout />}>
+          <Route element={<ProtectedLayout />}>
             <Route path="/dashboard" element={<Dashboard />} />
           </Route>
 

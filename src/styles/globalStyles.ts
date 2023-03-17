@@ -15,15 +15,22 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 62.5%;
     }
 
+    body {
+        background: var(--grey-200);
+    }
+
     :root {
         --purple: #AD1FEA;
         --white: #fff;
+        --blue: #4661E6;
         --white-200: #F2F4FE;
         --red: #d73737;
         --grey-200: #f7f8fd;
+        --grey-400: #CFD7FF;
         --dark-600: #3A4374; 
-
+        
         --font-normal: 400;
+        --font-medium: 500;
         --font-semibold: 600;
         --font-bold: 700;
         --text-xxs: 1.3rem;

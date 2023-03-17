@@ -1,6 +1,11 @@
-import { Button } from "@/components/ui";
 import authService from "../auth/auth.service";
+import { Button } from "@/components/ui";
 import { useNavigate } from "react-router-dom";
+import { DashboardLayout } from "@/components/layouts/DashboardLayout";
+import { Aside } from "@/components/ui/Aside";
+import styled from "styled-components";
+
+const StyledDashboard = styled.div``;
 
 export const Dashboard = () => {
   let navigate = useNavigate();
@@ -12,8 +17,11 @@ export const Dashboard = () => {
   };
 
   return (
-    <div>
-      <Button text="logout" onClick={() => handleLogout()} />
-    </div>
+    <DashboardLayout>
+      <StyledDashboard>
+        <Aside />
+      </StyledDashboard>
+      {/* <Button text="logout" onClick={() => handleLogout()} /> */}
+    </DashboardLayout>
   );
 };

@@ -1,33 +1,18 @@
-import { useEffect } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import React from "react";
+import styled from "styled-components";
 
-interface DashboardLayoutProps {}
+interface DashboardLayoutProps {
+  children: React.ReactNode;
+}
 
-export const DashboardLayout = ({}: DashboardLayoutProps) => {
-  const navigate = useNavigate();
+const DashboardLayoutWrapper = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 9.4rem 2.4rem;
+`;
 
-  useEffect(() => {
-    const isAuthenticated = () => {
-      const user = localStorage.getItem("user");
-      if (user) {
-        const userObject = JSON.parse(user);
-
-        if (!userObject.accessToken) {
-          navigate("/");
-        }
-      }
-
-      return user !== null;
-    };
-
-    if (!isAuthenticated()) {
-      navigate("/signin");
-    }
-  }, [navigate]);
-
-  return (
-    <>
-      <Outlet />
-    </>
-  );
+export const DashboardLayout = ({ children }: DashboardLayoutProps) => {
+  return <DashboardLayoutWrapper>{children}</DashboardLayoutWrapper>;
 };
