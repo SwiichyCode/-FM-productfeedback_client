@@ -1,17 +1,11 @@
 import styled from "styled-components";
 
 export const AsideTabsFilterWrapper = styled.div`
-  width: 100%;
-  height: 16.6rem;
-  padding: 2.4rem;
-  background-color: var(--white);
-  border-radius: var(--rounded-2xl);
-
   ul {
     max-width: 18.1rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
+    gap: 1.4rem;
   }
 `;
 
